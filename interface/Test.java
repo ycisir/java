@@ -211,6 +211,37 @@ class Result extends Exam implements Project {
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+// difference between interface and abstract class
+
+
+// an abstract class can have non-abstract methods , but all methods of interface are abstract.
+
+// a class can implement more than one interface , but an abstract class can not.
+
+// an abstract class can declare instance variable but interface cannot.
+
+// an abstract class can have user-defined constructor, but an interface has no constructor.
+
+// every methods of an interface is automatically public, but an abstract class can have non-public method.
+
+
+
+
+
+
+
+
 class Test {
 	public static void main(String[] args) {
 		Result obj = new Result();
