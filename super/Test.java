@@ -49,22 +49,87 @@
 
 // How a Subclass can hide method of super class
 
+// class Father {
+// 	void put() {
+// 		System.out.println("super class method");
+// 	}
+// }
+
+// class Son extends Father {
+// 	void put() {
+// 		System.out.println("sub class method");
+// 	}
+// 	void disp() {
+// 		// put();
+// 		super.put();
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// super with default constructor
+
+// class Father {
+// 	Father() {
+// 		System.out.println("super class constructor");
+// 	}
+// }
+
+// class Son extends Father {
+// 	// you have not mention super() here but here it's
+// 	Son() {
+// 		// super() --- this called super class constructor --- written by compiler
+// 		// optional in default constructor 
+// 		System.out.println("sub class constructor");
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// super with parameterized constructor
+
+// we cant inherit constructor
 class Father {
-	void put() {
-		System.out.println("super class method");
+	Father(int x) {
+		int a = x;
+		System.out.println("super class constructor A: "+a);
 	}
 }
 
 class Son extends Father {
-	void put() {
-		System.out.println("sub class method");
-	}
-	void disp() {
-		// put();
-		super.put();
+	// you have not mention super() here but here it's
+	Son() {
+		super(100); // number of parameters and type should be same here and in sequence
+		int b = 200;
+		System.out.println("sub class constructor B: "+b);
 	}
 }
-
 
 
 
@@ -73,6 +138,6 @@ class Son extends Father {
 class Test {
 	public static void main(String[] args) {
 		Son obj = new Son();
-		obj.disp();
+		// obj.disp();
 	}
 }
